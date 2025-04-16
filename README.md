@@ -1,6 +1,15 @@
 # Welcome to the project
 
+Simple way to run this game download the code as zip file.
+Unzip it.
+Open Terminal in the Root Directory 
+( simply Be inside the unzipped folder press shift + right click mouse button and choose open terminal on Windows)
 
+After run the commands :
+npm i
+npm run dev
+
+choose one of the recommended localhosts and open in browser.
 
 **Use your preferred IDE**
 
