@@ -1,0 +1,258 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --sidebar-background: 226 64% 14%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-muted: 215 35% 20%;
+    --sidebar-muted-foreground: 215 20.2% 65.1%;
+    --sidebar-accent: 223 55% 22%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 215 20.2% 65.1%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 222.2 47.4% 11.2%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+
+  .world-container {
+    transform-style: preserve-3d;
+    perspective: 800px;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+  .hero-text {
+    font-family: 'Impact', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 0, 0, 0.3);
+  }
+
+  .perspective-\[1000px\] {
+    perspective: 1000px;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  :hover::-webkit-scrollbar {
+    opacity: 1;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .filter-drop-shadow-glow {
+    filter: drop-shadow(0 0 10px rgba(234, 56, 76, 0.8));
+  }
+
+  .text-shadow-glow {
+    text-shadow: 0 0 10px rgba(234, 56, 76, 0.8), 0 0 20px rgba(234, 56, 76, 0.4);
+  }
+}
+
+@keyframes float-cloud {
+  0% {
+    transform: translateX(-20%) translateZ(var(--z, -100px));
+  }
+  100% {
+    transform: translateX(120%) translateZ(var(--z, -100px));
+  }
+}
+
+@keyframes rain {
+  0% {
+    transform: translateY(-10px) translateX(0);
+  }
+  100% {
+    transform: translateY(120vh) translateX(-20px);
+  }
+}
+
+@keyframes snow {
+  0% {
+    transform: translateY(-10px) translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(25vh) translateX(10px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(50vh) translateX(-10px) rotate(90deg);
+  }
+  75% {
+    transform: translateY(75vh) translateX(10px) rotate(135deg);
+  }
+  100% {
+    transform: translateY(120vh) translateX(0) rotate(180deg);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes float-animation {
+  0% {
+    transform: translateY(0) translateZ(10px) rotateX(0) rotateY(0);
+  }
+  50% {
+    transform: translateY(-10px) translateZ(20px) rotateX(2deg) rotateY(2deg);
+  }
+  100% {
+    transform: translateY(0) translateZ(10px) rotateX(0) rotateY(0);
+  }
+}
+
+@keyframes animate-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes animate-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes animate-rise {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-bounce {
+  animation: animate-bounce 1.5s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: animate-pulse 2s ease-in-out infinite;
+}
+
+.animate-rise {
+  animation: animate-rise 2s ease-out;
+}
+
+/* Custom responsive classes */
+@media (max-width: 640px) {
+  .scene-wrapper {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}
+
+/* Modal positioning */
+.ui-modal {
+  position: fixed !important;
+  z-index: 100 !important;
+  transform: translate(-50%, -50%);
+  top: 50% !important;
+  left: 50% !important;
+}
+
+/* Improve performance */
+.scene-wrapper {
+  -webkit-overflow-scrolling: touch; /* For better touch scrolling */
+  will-change: transform; /* Hint to browser about transform changes */
+  transform: translateZ(0); /* Force GPU acceleration */
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  .scene-wrapper {
+    max-height: 60vh;
+  }
+  
+  .float-animation {
+    animation: none !important; /* Disable animations on mobile for better performance */
+  }
+}
