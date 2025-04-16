@@ -21,6 +21,8 @@ example :
   ➜  Network: http://169.254.61.130:8080/
   ➜  Network: http://172.31.80.1:8080/
 
+Play around with the game it has a lot of features to explore so pay attention to the buttons that exist in the corners and around the setup to make you gaming more pleasant and more fun you can customize it to your liking!! 
+
 **Use your preferred IDE**
 
 If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
