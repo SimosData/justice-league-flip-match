@@ -1,15 +1,25 @@
 # Welcome to the project
 
-Simple way to run this game download the code as zip file.
+Simple way to run this game download the code as zip file.  (justice-league-flip-match-main.zip)
+
 Unzip it.
-Open Terminal in the Root Directory 
+
+Open Terminal in the Root Directory (justice-league-flip-match-main)
+
 ( simply Be inside the unzipped folder press shift + right click mouse button and choose open terminal on Windows)
 
-After run the commands :
+ example of directory to be in when you open terminal {C:\Users\shins\Desktop\Downloads\justice-league-flip-match-main\justice-league-flip-match-main>} yours will look different
+
+After run the commands in the terminal :
 npm i
 npm run dev
 
-choose one of the recommended localhosts and open in browser.
+choose one of the recommended localhosts and open in browser url bar(search bar) ip address bar
+example :
+➜  Local:   http://localhost:8080/
+  ➜  Network: http://192.168.0.2:8080/
+  ➜  Network: http://169.254.61.130:8080/
+  ➜  Network: http://172.31.80.1:8080/
 
 **Use your preferred IDE**
 
